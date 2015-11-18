@@ -1,0 +1,10 @@
+<div class="container2">
+<h1><underline>Ticket Page</underline></h1>
+<center>
+<%= link_to image_tag("2-Part-Coat-Check-Roll-Ticket-lg.gif", size: "400x200") %>
+</center>
+<!--creates a random number -->
+<h1> Number Generated: </h1>
+<h1><%= rand(1..1000) %></h1>
+<center><%= link_to "Generate A New Number", tickets_show_path, class: "btn btn-warning" %></center>
+</div>

@@ -1,0 +1,18 @@
+<div class="container2">
+<center><h1> Reminders </h1></center>
+
+<!--iterating through and providing all reminders in our index view -->
+<% @reminders.each do |reminder| %>
+<div class="index_row clearfix">
+   <h2 class="reminder_title"><%= link_to reminder.title, reminder %></h2>
+   <p class="reminder_sub_title"><%= reminder.description %></p>
+      <p class="reminder_sub_title"><%= reminder.user.email %></p>
+</div>
+ <% end %>
+
+<!--Allows me to create a new reminder, and is a link-->
+ <div class="links">
+ <%= link_to "Reminder List", new_reminder_path %>
+</div>
+</div>
+

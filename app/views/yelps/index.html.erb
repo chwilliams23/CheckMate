@@ -1,0 +1,21 @@
+<center><h1> COAT CHECKS IN THE NEW YORK AREA </h1></center>
+<%= form_tag(yelps_path, method: "get") do %>
+			<div class="center jumbotron">
+
+<%= text_field_tag(:q) %>
+<%= submit_tag("Coat Check Search") %>
+<% end %>
+
+<ul>
+	<% @businesses.each do |yelp| %>
+	 <li>
+	 	<div>
+	 		<h2 class="reminder_title">Venue Name: <b><%=link_to yelp.name, yelp.url, target: "_blank" %></b></h2>
+	 		<h2 class="reminder_title"> Phone Number: <b><%=yelp.phone %></b></h2>
+	 		<h2 class="reminder_title"> Category: <b><%=yelp.categories %></b></h2>
+	 	</div>
+	 	</li>
+      <hr>
+    <% end %>
+</ul>
+</div>

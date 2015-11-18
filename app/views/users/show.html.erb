@@ -1,0 +1,24 @@
+<div class="container2">
+	<h2 class="reminder_title"> User Profile </h2>
+	<ul>  
+ <l1> 
+ 	<center><%= gravatar_for @user %> </center>
+
+<h2 class="reminder_title"> Users Name: <%= @user.name %></h2>
+<hr width = "50%">
+
+<h2 class="reminder_title"><i class="fa fa-spinner fa-spin "></i>Ticket Number: <%= @user.ticket_number %></h2>
+<hr width = "50%">
+
+ <h2 class="reminder_title"> Email: <%= @user.email %></h2>
+<hr width = "50%">
+
+<h2 class="reminder_title">Date of birth:  <%= @user.date_of_birth %></h2>
+<hr width = "50%">
+
+<h2 class="reminder_title"> Last 4 digits of fake credit card number:  <%= @user.credit_card %> </h2>
+<hr width = "70%">
+<%=link_to 'Update Your User Account', edit_user_registration_path, class: "btn btn-primary btn-block"%>
+</li>
+</ul>
+</div>

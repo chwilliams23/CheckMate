@@ -1,0 +1,19 @@
+<div class="container2">
+<p id="notice"><%= notice %></p>
+
+<h2 class="reminder_title"><%= @reminder.title %></h2>
+<p class="reminder_sub_title"><%= @reminder.description %></p>
+
+<div id="reminder_items_wrapper">
+	<%= render @reminder.reminder_items %>
+	<div id="form">
+		<%= render "reminder_items/form" %>
+	</div>
+</div>
+
+<div class="links">
+	<%= link_to 'Edit', edit_reminder_path(@reminder) %> |
+	<%= link_to 'Delete', reminder_path(@reminder), method: :delete, data: { confirm: "Are you sure?" }
+ %> |
+  <%= link_to 'Back', reminders_path %>
+          </div>

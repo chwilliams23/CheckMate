@@ -1,0 +1,21 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+	 <%= link_to "Check Mate", '#', id: "logo" %>
+   <nav>
+    <ul class="nav navbar-nav navbar-left">
+     <li><%= link_to "Log in", user_session_path %></li>
+        </ul>
+           </nav>
+    <div class="container">
+      <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", home_path %></li>
+            <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Reminders", reminders_path %></li>
+            <li><%= link_to "Additional Ticket", tickets_index_path %></li>
+             <li><%= link_to "Search", yelps_path %></li>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
+         </ul>
+
+        </nav>
+    </div>
+ </header>
