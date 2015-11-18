@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+ruby "2.2.2"
+
 
 #user authentication gem
 gem 'devise'
@@ -47,19 +49,16 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
  gem 'sqlite3'
 
- gem "spring"
- 
- gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 2.0'
 
 
  end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-
+ gem "spring"
 end
 group :production do
  gem 'pg',             '0.17.1'
  gem 'rails_12factor', '0.0.2'
 end
-
