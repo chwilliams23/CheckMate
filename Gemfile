@@ -28,9 +28,9 @@ group :development, :test do
 
  gem 'web-console', '~> 2.0'
 
- gem 'sqlite3'
-
   gem "spring"
+
+  gem "sqlite3"
 end
 
 group :production do
